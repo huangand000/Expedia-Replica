@@ -59,7 +59,7 @@ def add_process(request, id):
                 create = False
             if datetime.strptime(request.POST['dateFrom'], '%Y-%m-%d').date() < datetime.today().date() or datetime.strptime(request.POST['dateTo'], '%Y-%m-%d').date() < datetime.today().date():
                 messages.error(request, "Travel dates should be future-dated")
-                create = False
+                # create = False
         if len(request.POST['destination']) == 0 or len(request.POST['description']) == 0 or len(request.POST['dateFrom']) == 0 or len(request.POST['dateTo']) == 0:
             messages.error(request, "No empty entries")
             create = False
