@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login & Reg | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <h1>Welcome!</h1>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <h2>Registration</h2>
+    <form action='/register' method='POST'>
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td> 
+                        Name:
+                    </td>
+                    <td>
+                        <input type='text' name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Username:
+                    </td>
+                    <td>
+                        <input type ='text' name="username">
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        Birthday:
+                    </td>
+                    <td>
+                        <input type='date' name='date'>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type='password' name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm pw:
+                    </td>
+                    <td>
+                        <input type='password' name="confirm">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type='submit' value='Register'>
+    </form>
+    <h2>Login</h2>
+    <form action='/login' method='post'>
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td> 
+                        Username:
+                    </td>
+                    <td>
+                        <input type='text' name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password: 
+                    </td>
+                    <td>
+                        <input type='password' name="loginpw"> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type='submit' value='Login'>
+    </form>
+</body>
+</html>

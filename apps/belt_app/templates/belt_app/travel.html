@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <a href='/success'>Home</a>
+    <a href='/logout'>Logout</a>
+    <h2>{{travel.destination}}</h2>
+    <p>Planned By: {{user.name}}</p>
+    <p>Description: {{travel.description}}</p>
+    <p>Travel Date From: {{travel.start_date}}</p>
+    <p>Travel Date To: {{travel.end_date}}</p>
+    <br>
+    <br>
+    <h2>Other users' joining the trip:</h2>
+    {% for user in other_users %}
+        {% if user.name != creator %}
+            <p>{{user.name}}</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

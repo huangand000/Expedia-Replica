@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <a href='/logout'>Logout</a>
+    <h2>Hi, {{request.session.name}}</h2>
+
+    <h3>Your Trip Schedules</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Destination </td>
+                <td>Travel Start Date</td>
+                <td>Travel End Date</td>
+                <td>Plan</td>
+            </tr>
+        </thead>
+        {% for travel in user_travels %}
+        <tbody>
+            <tr>
+                <td><a href="/travel/{{travel.id}}">{{travel.destination}}</a></td>
+                <td>{{travel.start_date}}</td>
+                <td>{{travel.end_date}}</td>
+                <td>{{travel.description}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    <h3>Other User's Travel Plans</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Destination </td>
+                <td>Travel Start Date</td>
+                <td>Travel End Date</td>
+                <td>Do You Want To Join?</td>
+            </tr>
+        </thead>
+        {% for user in users %}
+            {% for travel in travels %}
+                {% if user.id == travel.user_id and travel not in user_travels %}
+                    <tbody>
+                        <tr>
+                            <td>{{user.name}}</td>
+                            <td><a href="/travel/{{travel.id}}">{{travel.destination}}</a></td>
+                            <td>{{travel.start_date}}</td>
+                            <td>{{travel.end_date}}</td>
+                            <td><a href="/join/{{travel.id}}">Join</a></td>
+                        </tr>
+                    </tbody>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/add">Add Travel Plan</a>
+</body>
+</html>
