@@ -10,6 +10,7 @@ Features:
 2) Add a Travel with start and end date with Date validations
 3) See own travels versus other users' travels
 4) Add other travels to own list
+5) Temporary deployment on AWS
 
 To Use:
 =======
