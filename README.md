@@ -9,6 +9,11 @@ A Expedia/Traveling mock website with the functionalities of:
 3) See own travels versus other users' travels
 4) Add other travels to own list
 
+Completion Time: 
+======
+2 hours
+
+
 To Use:
 =======
 1) Git clone in desired repository
@@ -18,7 +23,3 @@ To Use:
 5) Python manage.py migrate
 6) Python manage.py runserver
 7) Open localhost:8000 to see project!
-
-Completion Time: 
-======
-2 hours
