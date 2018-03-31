@@ -1,10 +1,10 @@
-Expedia-Replica
+Expedia/Traveling Replica:
 ==============
 A simple Python full-stack website using Django as the Back-end framework and SQLite as the Database.
 
 Completion Time: 2.5 hours
 
-A Expedia/Traveling mock website with the functionalities of:
+Features:
 ===========
 1) User Login/Registration with validations
 2) Add a Travel with start and end date with Date validations
