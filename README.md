@@ -11,9 +11,10 @@ A Expedia/Traveling mock website with the functionalities of:
 
 To Use:
 =======
-1) Git clone into desired repository
-2) Npm install all Node.js dependencies
-3) Ng build --watch in app level repository to compile dist folder for front-end/back-end communication (Angular/Express)
-4) Run sudo mongod in background to require access to database
-5) Nodemon server.js to run the server
-6) Listen at localhost:8000 to see project
+1) Git clone in desired repository
+2) Create virtual environment (optional)
+3) Pip install -r requirements.txt (Install all necessary packages to run project)
+4) Python manage.py makemigrations
+5) Python manage.py migrate
+6) Python manage.py runserver
+7) Open localhost:8000 to see project!
