@@ -11,7 +11,7 @@ A Expedia/Traveling mock website with the functionalities of:
 
 Completion Time: 
 ======
-2 hours
+2.5 hours
 
 
 To Use:
