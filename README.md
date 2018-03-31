@@ -2,17 +2,14 @@ Expedia-Replica
 ==============
 A simple Python full-stack website using Django as the Back-end framework and SQLite as the Database.
 
+Completion Time: 2.5 hours
+
 A Expedia/Traveling mock website with the functionalities of:
 ===========
 1) User Login/Registration with validations
 2) Add a Travel with start and end date with Date validations
 3) See own travels versus other users' travels
 4) Add other travels to own list
-
-Completion Time: 
-======
-2.5 hours
-
 
 To Use:
 =======
