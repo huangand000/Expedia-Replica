@@ -18,3 +18,7 @@ To Use:
 5) Python manage.py migrate
 6) Python manage.py runserver
 7) Open localhost:8000 to see project!
+
+Completion Time: 
+======
+2 hours
